@@ -116,15 +116,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .action-image > div { position: relative; z-index: 1; padding: 2.2rem; }
 .tag-light { color: var(--gold); }
 
-.hall-section { display: grid; grid-template-columns: 1fr 1fr; align-items: start; gap: clamp(3rem, 8vw, 8rem); background: var(--paper); }
-.hall-intro { position: sticky; top: 120px; }
-.hall-intro h2, .social-section h2 { margin: 0; color: var(--ink); font-family: Georgia, serif; font-size: clamp(2.8rem, 5.5vw, 5rem); font-weight: 500; line-height: .98; letter-spacing: -.045em; }
-.hall-intro > p:not(.eyebrow) { max-width: 650px; margin: 1.8rem 0; color: var(--muted); font-size: 1.05rem; }
-.hall-process { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
-.hall-process li { display: grid; grid-template-columns: 70px 1fr; gap: 1rem; padding: 2rem 0; border-bottom: 1px solid var(--line); }
-.hall-process li > span { color: var(--orange); font-family: Georgia, serif; font-size: 2rem; }
-.hall-process strong { color: var(--ink); font-family: Georgia, serif; font-size: 1.55rem; }
-.hall-process p { margin: .45rem 0 0; color: var(--muted); }
+.social-section h2 { margin: 0; color: var(--ink); font-family: Georgia, serif; font-size: clamp(2.8rem, 5.5vw, 5rem); font-weight: 500; line-height: .98; letter-spacing: -.045em; }
 
 .filter-row { display: flex; flex-wrap: wrap; gap: .55rem; margin-bottom: 1.5rem; }
 .filter-button { padding: .62rem 1rem; color: var(--ink); background: transparent; border: 1px solid var(--ink); border-radius: 999px; font: inherit; font-size: .82rem; font-weight: 750; cursor: pointer; }
@@ -228,9 +220,8 @@ blockquote cite { color: var(--muted); font-size: .76rem; font-style: normal; fo
   .quick-strip { grid-template-columns: 1fr; }
   .quick-strip a { border-right: 0; border-bottom: 1px solid rgba(255,255,255,.17); }
   .section-heading, .contact-section { grid-template-columns: 1fr; gap: 1.5rem; }
-  .role-grid, .hall-section { grid-template-columns: 1fr; }
+  .role-grid { grid-template-columns: 1fr; }
   .role-card, .role-card:last-child { grid-column: auto; min-height: 310px; }
-  .hall-intro { position: static; }
   .event-grid, .action-grid { grid-template-columns: 1fr; }
   .event-featured { grid-column: auto; }
   .event-card { min-height: 290px; }
@@ -252,10 +243,6 @@ blockquote cite { color: var(--muted); font-size: .76rem; font-style: normal; fo
   .role-grid { grid-template-columns: minmax(0, 1fr); }
   .role-card { min-width: 0; padding: 1.5rem; }
   .role-card h3, .role-card small { overflow-wrap: anywhere; }
-  .hall-section { grid-template-columns: minmax(0, 1fr); }
-  .hall-intro, .hall-process { min-width: 0; }
-  .hall-intro h2, .hall-process strong { overflow-wrap: anywhere; }
-  .hall-process li { grid-template-columns: 48px minmax(0, 1fr); gap: .75rem; }
   .hero-actions .button { width: 100%; }
   .club-grid { grid-template-columns: 1fr; }
   .social-grid { grid-template-columns: 1fr; }
