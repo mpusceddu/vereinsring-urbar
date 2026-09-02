@@ -252,6 +252,10 @@ blockquote cite { color: var(--muted); font-size: .76rem; font-style: normal; fo
   .role-grid { grid-template-columns: minmax(0, 1fr); }
   .role-card { min-width: 0; padding: 1.5rem; }
   .role-card h3, .role-card small { overflow-wrap: anywhere; }
+  .hall-section { grid-template-columns: minmax(0, 1fr); }
+  .hall-intro, .hall-process { min-width: 0; }
+  .hall-intro h2, .hall-process strong { overflow-wrap: anywhere; }
+  .hall-process li { grid-template-columns: 48px minmax(0, 1fr); gap: .75rem; }
   .hero-actions .button { width: 100%; }
   .club-grid { grid-template-columns: 1fr; }
   .social-grid { grid-template-columns: 1fr; }
