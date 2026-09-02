@@ -205,6 +205,8 @@ blockquote cite { color: var(--muted); font-size: .76rem; font-style: normal; fo
 }
 
 @media (max-width: 480px) {
+  .section-heading { grid-template-columns: minmax(0, 1fr); }
+  .section-heading h2, .contact-section h2 { font-size: 2.35rem; overflow-wrap: anywhere; }
   .hero-actions .button { width: 100%; }
   .club-grid { grid-template-columns: 1fr; }
   .club-card { min-height: 175px; }
