@@ -91,17 +91,17 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .event-card a { color: var(--ink); font-size: .85rem; font-weight: 850; text-decoration: none; }
 .source-note { margin: 1.5rem 0 0; color: var(--muted); font-size: .78rem; }
 
-.role-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
-.role-card { min-height: 360px; display: flex; flex-direction: column; padding: 2rem; background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); }
+.role-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+.role-card { min-width: 0; min-height: 360px; display: flex; flex-direction: column; padding: 2rem; background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); }
 .role-card::before { content: ""; width: 56px; height: 6px; margin-bottom: auto; background: var(--orange); border-radius: 999px; }
 .role-support::before { background: var(--gold); }
 .role-coordinate::before { background: var(--blue); }
 .role-label { margin: 2.5rem 0 .7rem; color: var(--orange); font-size: .7rem; font-weight: 850; letter-spacing: .12em; text-transform: uppercase; }
 .role-support .role-label { color: #98701d; }
 .role-coordinate .role-label { color: #39717b; }
-.role-card h3 { margin: 0 0 .7rem; color: var(--ink); font-family: Georgia, serif; font-size: 2rem; line-height: 1.05; }
+.role-card h3 { margin: 0 0 .7rem; color: var(--ink); font-family: Georgia, serif; font-size: 2rem; line-height: 1.05; overflow-wrap: anywhere; }
 .role-card p { margin: 0 0 1.8rem; color: var(--muted); }
-.role-card small { margin-top: auto; padding-top: 1.2rem; color: var(--ink); border-top: 1px solid var(--line); font-size: .76rem; font-weight: 750; }
+.role-card small { margin-top: auto; padding-top: 1.2rem; color: var(--ink); border-top: 1px solid var(--line); font-size: .76rem; font-weight: 750; overflow-wrap: anywhere; }
 
 .action-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 1rem; }
 .action-card { min-height: 390px; position: relative; display: flex; flex-direction: column; justify-content: flex-end; padding: 2rem; color: var(--ink); background: var(--gold); border-radius: var(--radius); overflow: hidden; }
@@ -119,15 +119,15 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .filter-row { display: flex; flex-wrap: wrap; gap: .55rem; margin-bottom: 1.5rem; }
 .filter-button { padding: .62rem 1rem; color: var(--ink); background: transparent; border: 1px solid var(--ink); border-radius: 999px; font: inherit; font-size: .82rem; font-weight: 750; cursor: pointer; }
 .filter-button.active, .filter-button:hover { color: white; background: var(--ink); }
-.club-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: .85rem; }
-.club-card { min-height: 205px; padding: 1.4rem; background: var(--paper); border: 1px solid rgba(23,63,53,.1); border-radius: 16px; transition: transform .2s ease, box-shadow .2s ease; }
+.club-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .85rem; }
+.club-card { min-width: 0; min-height: 205px; padding: 1.4rem; background: var(--paper); border: 1px solid rgba(23,63,53,.1); border-radius: 16px; transition: transform .2s ease, box-shadow .2s ease; }
 .club-card:hover { transform: translateY(-3px); box-shadow: 0 12px 35px rgba(15,42,36,.08); }
 .club-card[hidden] { display: none; }
 .club-icon { display: grid; place-items: center; width: 42px; height: 42px; margin-bottom: 2.2rem; color: white; background: var(--orange); border-radius: 50%; font-size: 1rem; }
 .club-card:nth-child(3n) .club-icon { background: var(--blue); }
 .club-card:nth-child(3n+2) .club-icon { color: var(--ink); background: var(--gold); }
-.club-card small { color: var(--muted); font-size: .68rem; font-weight: 850; letter-spacing: .1em; text-transform: uppercase; }
-.club-card h3 { margin: .35rem 0 0; color: var(--ink); font-family: Georgia, serif; font-size: 1.18rem; line-height: 1.2; }
+.club-card small { color: var(--muted); font-size: .68rem; font-weight: 850; letter-spacing: .1em; text-transform: uppercase; overflow-wrap: anywhere; }
+.club-card h3 { margin: .35rem 0 0; color: var(--ink); font-family: Georgia, serif; font-size: 1.18rem; line-height: 1.2; overflow-wrap: anywhere; }
 
 .story-section { display: grid; grid-template-columns: .6fr 1.2fr 1fr; align-items: center; gap: 4rem; background: var(--paper); }
 .story-number { color: var(--orange); font-family: Georgia, serif; font-size: clamp(6rem, 14vw, 14rem); line-height: .8; opacity: .18; }
@@ -144,7 +144,14 @@ blockquote cite { color: var(--muted); font-size: .76rem; font-style: normal; fo
 .contact-actions { display: flex; flex-direction: column; align-items: flex-start; gap: 1.2rem; }
 .button-cream { color: var(--ink); background: var(--cream); }
 .text-link { font-weight: 800; text-underline-offset: 4px; }
-.contact-socials { display: flex; flex-wrap: wrap; gap: .7rem 1.25rem; }
+.contact-socials { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .7rem; width: 100%; max-width: 520px; }
+.contact-link { display: grid; grid-template-columns: 40px minmax(0, 1fr) auto; align-items: center; gap: .65rem; min-width: 0; padding: .68rem .75rem; color: white; background: rgba(255,255,255,.09); border: 1px solid rgba(255,255,255,.3); border-radius: 14px; font-size: .86rem; font-weight: 800; text-decoration: none; transition: transform .2s ease, background .2s ease; }
+.contact-link:hover { transform: translateY(-2px); background: rgba(255,255,255,.16); }
+.contact-icon { display: grid; place-items: center; width: 40px; height: 40px; color: var(--ink); background: var(--cream); border-radius: 50%; }
+.contact-icon svg { width: 21px; height: 21px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.contact-icon svg .icon-fill { fill: currentColor; stroke: none; }
+.contact-icon-letter { font-family: Georgia, serif; font-size: 1.75rem; font-weight: 700; line-height: 1; }
+.contact-arrow { display: none; }
 
 .site-footer { display: grid; grid-template-columns: 1fr auto; gap: 2rem; padding: 3rem clamp(1.25rem, 8vw, 8rem); color: white; background: var(--ink-dark); }
 .footer-brand { display: flex; align-items: center; gap: .8rem; }
@@ -211,11 +218,13 @@ blockquote cite { color: var(--muted); font-size: .76rem; font-style: normal; fo
   .event-featured { grid-column: 1 / -1; }
   .action-grid { grid-template-columns: 1fr 1fr; }
   .action-image { grid-row: span 2; }
-  .club-grid { grid-template-columns: repeat(3, 1fr); }
+  .club-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .story-section { grid-template-columns: .5fr 1.5fr; }
   .story-section blockquote { grid-column: 2; }
-  .role-grid { grid-template-columns: 1fr 1fr; }
+  .role-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .role-card:last-child { grid-column: 1 / -1; min-height: 300px; }
+  .contact-section { grid-template-columns: 1fr; }
+  .contact-actions { width: 100%; }
 }
 
 @media (max-width: 900px) {
@@ -256,7 +265,7 @@ blockquote cite { color: var(--muted); font-size: .76rem; font-style: normal; fo
   .event-card { min-height: 290px; }
   .action-image { grid-row: auto; min-height: 510px; }
   .action-card:not(.action-image) { min-height: 310px; }
-  .club-grid { grid-template-columns: 1fr 1fr; }
+  .club-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .story-section { grid-template-columns: 1fr; gap: 2rem; }
   .story-number { font-size: 7rem; }
   .story-section blockquote { grid-column: auto; }
@@ -282,6 +291,10 @@ blockquote cite { color: var(--muted); font-size: .76rem; font-style: normal; fo
   .submission-intro h1 { font-size: clamp(2.75rem, 15vw, 4rem); overflow-wrap: anywhere; }
   .submission-card { padding: 1.1rem; }
   .form-actions .button { width: 100%; }
+}
+
+@media (max-width: 420px) {
+  .contact-socials { grid-template-columns: 1fr; }
 }
 
 @media (prefers-reduced-motion: reduce) {
