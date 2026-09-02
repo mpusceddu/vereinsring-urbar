@@ -116,8 +116,6 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .action-image > div { position: relative; z-index: 1; padding: 2.2rem; }
 .tag-light { color: var(--gold); }
 
-.social-section h2 { margin: 0; color: var(--ink); font-family: Georgia, serif; font-size: clamp(2.8rem, 5.5vw, 5rem); font-weight: 500; line-height: .98; letter-spacing: -.045em; }
-
 .filter-row { display: flex; flex-wrap: wrap; gap: .55rem; margin-bottom: 1.5rem; }
 .filter-button { padding: .62rem 1rem; color: var(--ink); background: transparent; border: 1px solid var(--ink); border-radius: 999px; font: inherit; font-size: .82rem; font-weight: 750; cursor: pointer; }
 .filter-button.active, .filter-button:hover { color: white; background: var(--ink); }
@@ -139,17 +137,6 @@ blockquote { margin: 0; padding: 2.2rem; background: var(--cream); border-radius
 blockquote p { margin: 0 0 1.5rem; color: var(--ink); font-family: Georgia, serif; font-size: 1.7rem; line-height: 1.25; }
 blockquote cite { color: var(--muted); font-size: .76rem; font-style: normal; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
 
-.social-section { display: grid; grid-template-columns: .8fr 1.2fr; align-items: center; gap: clamp(3rem, 7vw, 7rem); padding: clamp(4rem, 8vw, 7rem) clamp(1.25rem, 8vw, 8rem); background: var(--cream); }
-.social-section > div > p:not(.eyebrow) { color: var(--muted); }
-.social-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: .8rem; }
-.social-card { min-height: 190px; display: flex; flex-direction: column; justify-content: flex-end; padding: 1.35rem; color: white; background: var(--ink); border-radius: 18px; text-decoration: none; }
-.social-card > span { margin-bottom: auto; font-family: Georgia, serif; font-size: 2.3rem; }
-.social-card strong { font-family: Georgia, serif; font-size: 1.45rem; }
-.social-card small { color: rgba(255,255,255,.68); font-size: .72rem; font-weight: 750; }
-.social-facebook { background: #305ca8; }
-.social-instagram { background: #a34777; }
-.social-whatsapp { background: #177e57; }
-
 .contact-section { display: grid; grid-template-columns: 1.3fr .7fr; align-items: center; gap: 3rem; padding: clamp(4rem, 8vw, 7rem) clamp(1.25rem, 8vw, 8rem); color: white; background: var(--orange); }
 .contact-section .eyebrow { color: var(--cream); }
 .contact-section h2 { color: white; }
@@ -157,6 +144,7 @@ blockquote cite { color: var(--muted); font-size: .76rem; font-style: normal; fo
 .contact-actions { display: flex; flex-direction: column; align-items: flex-start; gap: 1.2rem; }
 .button-cream { color: var(--ink); background: var(--cream); }
 .text-link { font-weight: 800; text-underline-offset: 4px; }
+.contact-socials { display: flex; flex-wrap: wrap; gap: .7rem 1.25rem; }
 
 .site-footer { display: grid; grid-template-columns: 1fr auto; gap: 2rem; padding: 3rem clamp(1.25rem, 8vw, 8rem); color: white; background: var(--ink-dark); }
 .footer-brand { display: flex; align-items: center; gap: .8rem; }
@@ -189,7 +177,6 @@ blockquote cite { color: var(--muted); font-size: .76rem; font-style: normal; fo
   .story-section blockquote { grid-column: 2; }
   .role-grid { grid-template-columns: 1fr 1fr; }
   .role-card:last-child { grid-column: 1 / -1; min-height: 300px; }
-  .social-section { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 900px) {
@@ -233,7 +220,6 @@ blockquote cite { color: var(--muted); font-size: .76rem; font-style: normal; fo
   .story-section blockquote { grid-column: auto; }
   .site-footer { grid-template-columns: 1fr; }
   .site-footer nav { justify-content: flex-start; }
-  .social-grid { grid-template-columns: 1fr 1fr 1fr; }
 }
 
 @media (max-width: 480px) {
@@ -245,8 +231,6 @@ blockquote cite { color: var(--muted); font-size: .76rem; font-style: normal; fo
   .role-card h3, .role-card small { overflow-wrap: anywhere; }
   .hero-actions .button { width: 100%; }
   .club-grid { grid-template-columns: 1fr; }
-  .social-grid { grid-template-columns: 1fr; }
-  .social-card { min-height: 150px; }
   .club-card { min-height: 175px; }
   .club-icon { margin-bottom: 1.5rem; }
 }
