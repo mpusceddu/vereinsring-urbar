@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Veranstaltung oder Vereinstermin für den gemeinsamen Urbarer Kalender melden.">
+  <meta name="theme-color" content="#173f35">
+  <title>Veranstaltung melden · Vereinsring Urbar</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css?v=20260902-9">
+  <script src="script.js?v=20260902-1" defer></script>
+  <script src="veranstaltung-melden.js?v=20260902-1" defer></script>
+</head>
+<body class="submission-page">
+  <a class="skip-link" href="#meldeformular">Zum Formular springen</a>
+  <div class="preview-bar"><strong>Öffentliche Vorschau</strong><span>Noch keine offizielle Vereinsseite</span></div>
+
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Vereinsring Urbar – Startseite">
+      <span class="brand-mark" aria-hidden="true">VU</span>
+      <span><strong>Vereinsring Urbar</strong><small>Gemeinsam im Dorf</small></span>
+    </a>
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="hauptnavigation">
+      <span></span><span></span><span></span><span class="sr-only">Menü öffnen</span>
+    </button>
+    <nav id="hauptnavigation" class="main-nav" aria-label="Hauptnavigation">
+      <a href="index.html#termine">Termine</a>
+      <a href="index.html#vereine">Vereine</a>
+      <a href="index.html#aufgaben">Aufgaben</a>
+      <a href="index.html#aktionen">Aktionen</a>
+      <a class="nav-button" href="#meldeformular" aria-current="page">Termin melden</a>
+    </nav>
+  </header>
+
+  <main class="submission-main">
+    <header class="submission-intro">
+      <p class="eyebrow">Gemeinsame Jahresplanung</p>
+      <h1>Veranstaltung melden</h1>
+      <p>Von der Jahreshauptversammlung bis zum Dorffest: Hier können Urbarer Vereine ihre Termine vollständig und frühzeitig für die gemeinsame Planung melden.</p>
+    </header>
+
+    <div class="submission-layout">
+      <form id="meldeformular" class="submission-card">
+        <fieldset class="form-section">
+          <legend>Verein und Kontakt</legend>
+          <div class="form-grid">
+            <div class="form-field form-field-full">
+              <label for="verein">Verein *</label>
+              <select id="verein" name="verein" required>
+                <option value="">Bitte auswählen</option>
+                <option>FC Germania 1911 e. V. Urbar</option>
+                <option>Turnverein Urbar 1889 e. V.</option>
+                <option>Tanzsport time to dance e. V.</option>
+                <option>Singgemeinschaft 1868 Urbar e. V.</option>
+                <option>Kirmesgesellschaft Frohsinn e. V.</option>
+                <option>Möhnenverein Urbar 1951 e. V.</option>
+                <option>MIGU e. V.</option>
+                <option>Deutsches Rotes Kreuz Ortsverein Urbar</option>
+                <option>Freiwillige Feuerwehr – Löschzug Urbar</option>
+                <option>Sammellinse e. V.</option>
+                <option>St. Sebastianus Schützengesellschaft Urbar</option>
+                <option>Helping Hands e. V.</option>
+                <option>Anderer Verein / andere Organisation</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="ansprechperson">Ansprechperson *</label>
+              <input id="ansprechperson" name="ansprechperson" type="text" autocomplete="name" required>
+            </div>
+            <div class="form-field">
+              <label for="email">E-Mail *</label>
+              <input id="email" name="email" type="email" autocomplete="email" required>
+            </div>
+            <div class="form-field form-field-full">
+              <label for="telefon">Telefon für Rückfragen</label>
+              <input id="telefon" name="telefon" type="tel" autocomplete="tel">
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="form-section">
+          <legend>Der Termin</legend>
+          <div class="form-grid">
+            <div class="form-field form-field-full">
+              <label for="titel">Name der Veranstaltung *</label>
+              <input id="titel" name="titel" type="text" required placeholder="z. B. Jahreshauptversammlung oder Sommerfest">
+            </div>
+            <div class="form-field">
+              <label for="art">Art der Veranstaltung *</label>
+              <select id="art" name="art" required>
+                <option value="">Bitte auswählen</option>
+                <option>Jahreshauptversammlung</option>
+                <option>Mitgliederversammlung / Sitzung</option>
+                <option>Fest / Markt</option>
+                <option>Sportveranstaltung</option>
+                <option>Kultur / Musik</option>
+                <option>Kinder / Familie</option>
+                <option>Arbeitseinsatz</option>
+                <option>Sonstiges</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="wiederholung">Wiederholung</label>
+              <select id="wiederholung" name="wiederholung">
+                <option>Einmaliger Termin</option>
+                <option>Wöchentlich</option>
+                <option>Monatlich</option>
+                <option>Jährlich</option>
+                <option>Andere Wiederholung</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="datum-von">Datum *</label>
+              <input id="datum-von" name="datum-von" type="date" required>
+            </div>
+            <div class="form-field">
+              <label for="datum-bis">Enddatum, falls mehrtägig</label>
+              <input id="datum-bis" name="datum-bis" type="date">
+            </div>
+            <div class="form-field">
+              <label for="zeit-von">Beginn *</label>
+              <input id="zeit-von" name="zeit-von" type="time" required>
+            </div>
+            <div class="form-field">
+              <label for="zeit-bis">Ende</label>
+              <input id="zeit-bis" name="zeit-bis" type="time">
+            </div>
+            <div class="form-field form-field-full">
+              <label for="ort">Veranstaltungsort *</label>
+              <input id="ort" name="ort" type="text" required placeholder="z. B. Bürgerhaus Urbar, Sportplatz oder Vereinsheim">
+            </div>
+            <div class="form-field">
+              <label for="buergerhaus">Bürgerhaus benötigt?</label>
+              <select id="buergerhaus" name="buergerhaus">
+                <option>Nein</option>
+                <option>Ja</option>
+                <option>Noch unklar</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="besucher">Erwartete Personenzahl</label>
+              <input id="besucher" name="besucher" type="number" min="1" inputmode="numeric">
+            </div>
+            <div class="form-field">
+              <label for="aufbau">Aufbau ab</label>
+              <input id="aufbau" name="aufbau" type="datetime-local">
+            </div>
+            <div class="form-field">
+              <label for="abbau">Abbau bis</label>
+              <input id="abbau" name="abbau" type="datetime-local">
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="form-section">
+          <legend>Veröffentlichung</legend>
+          <div class="choice-group" role="radiogroup" aria-label="Soll der Termin veröffentlicht werden?">
+            <label class="choice-card">
+              <input type="radio" name="sichtbarkeit" value="Öffentlich" required>
+              <span><strong>Öffentlich</strong><small>Der Termin darf nach der Freigabe im Urbarer Veranstaltungskalender erscheinen.</small></span>
+            </label>
+            <label class="choice-card">
+              <input type="radio" name="sichtbarkeit" value="Nur zur internen Abstimmung" required>
+              <span><strong>Nur zur internen Abstimmung</strong><small>Der Termin wird bei der Planung berücksichtigt, aber nicht öffentlich angezeigt.</small></span>
+            </label>
+          </div>
+          <div class="form-grid" style="margin-top: 1.1rem;">
+            <div class="form-field form-field-full">
+              <label for="beschreibung">Kurzbeschreibung oder wichtige Hinweise</label>
+              <textarea id="beschreibung" name="beschreibung" placeholder="Was sollte der Vereinsring für die Abstimmung wissen?"></textarea>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="form-section">
+          <legend>Meldung abschließen</legend>
+          <div class="form-check">
+            <input id="datenschutz-zustimmung" name="datenschutz-zustimmung" type="checkbox" required>
+            <label for="datenschutz-zustimmung">Ich habe die <a href="datenschutz.html">Datenschutzhinweise</a> gelesen. Beim Absenden wird auf diesem Gerät eine vorbereitete E-Mail geöffnet. *</label>
+          </div>
+          <div class="form-actions">
+            <button class="button button-primary" type="submit">Meldung als E-Mail vorbereiten</button>
+            <p id="formular-status" class="form-status" role="status" aria-live="polite">Es werden keine Angaben auf dieser Website gespeichert.</p>
+          </div>
+        </fieldset>
+      </form>
+
+      <aside class="process-card" aria-labelledby="ablauf-title">
+        <p class="eyebrow">So geht es weiter</p>
+        <h2 id="ablauf-title">Vom Termin zum Kalender</h2>
+        <ol class="process-list">
+          <li><div><strong>Melden</strong><span>Der Verein trägt alle für die Planung wichtigen Angaben ein.</span></div></li>
+          <li><div><strong>Prüfen</strong><span>Der Vereinsring klärt Rückfragen und stimmt mögliche Überschneidungen ab.</span></div></li>
+          <li><div><strong>Veröffentlichen</strong><span>Freigegebene öffentliche Termine erscheinen im gemeinsamen Kalender.</span></div></li>
+        </ol>
+        <p class="process-note">Eine Meldung ist noch keine automatische Freigabe oder Reservierungsbestätigung.</p>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand"><span class="brand-mark" aria-hidden="true">VU</span><div><strong>Vereinsring Urbar</strong><small>Öffentliche Website-Vorschau</small></div></div>
+    <nav aria-label="Rechtliche Hinweise"><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a><a href="index.html#vereine">Vereinsverzeichnis</a></nav>
+    <p class="footer-note">Noch keine offizielle Website des Vereinsrings. Stand: September 2026.</p>
+  </footer>
+</body>
+</html>
