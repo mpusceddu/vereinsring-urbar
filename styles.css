@@ -61,7 +61,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .word-3 { left: 4%; bottom: 16%; transform: rotate(5deg); }
 .word-4 { right: 2%; bottom: 15%; transform: rotate(-6deg); }
 
-.quick-strip { display: grid; grid-template-columns: repeat(3, 1fr); color: white; background: var(--ink); }
+.quick-strip { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); color: white; background: var(--ink); }
 .quick-strip a { display: grid; grid-template-columns: auto 1fr; column-gap: 1rem; padding: 1.8rem clamp(1.25rem, 4vw, 4rem); text-decoration: none; border-right: 1px solid rgba(255,255,255,.17); }
 .quick-strip span { grid-row: span 2; color: var(--gold); font-family: Georgia, serif; font-size: 1.8rem; }
 .quick-strip strong { font-size: 1rem; }
@@ -209,6 +209,15 @@ blockquote cite { color: var(--muted); font-size: .76rem; font-style: normal; fo
 .process-list strong { display: block; font-size: .9rem; }
 .process-list span { display: block; margin-top: .12rem; color: rgba(255,255,255,.68); font-size: .76rem; line-height: 1.45; }
 .process-note { margin: 1.5rem 0 0; padding-top: 1.3rem; color: rgba(255,255,255,.68); border-top: 1px solid rgba(255,255,255,.16); font-size: .76rem; }
+.preview-notice { margin: 0 0 1.4rem; padding: .9rem 1rem; color: #735119; background: #fff2cc; border: 1px solid rgba(115,81,25,.2); border-radius: 12px; font-size: .82rem; }
+.material-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .8rem; }
+.material-item { display: grid; grid-template-columns: minmax(0, 1fr) 92px; align-items: center; gap: 1rem; min-width: 0; padding: 1rem; background: #f5f4ea; border: 1px solid var(--line); border-radius: 12px; }
+.material-item strong { display: block; color: var(--ink); font-family: Georgia, serif; font-size: 1.1rem; line-height: 1.15; }
+.material-item small { display: block; margin-top: .2rem; color: var(--muted); font-size: .72rem; }
+.material-item label { color: var(--muted); font-size: .7rem; font-weight: 800; text-align: right; }
+.material-item input { width: 78px; min-height: 46px; margin-top: .25rem; padding: .55rem; color: var(--text); background: white; border: 1px solid rgba(23,63,53,.28); border-radius: 9px; font: inherit; text-align: center; }
+.material-item input:focus { outline: 3px solid rgba(214,101,55,.2); border-color: var(--orange); }
+.material-hint { margin: .8rem 0 0; color: var(--muted); font-size: .76rem; }
 
 @media (max-width: 1050px) {
   .hero { min-height: auto; grid-template-columns: 1fr; }
@@ -225,9 +234,10 @@ blockquote cite { color: var(--muted); font-size: .76rem; font-style: normal; fo
   .role-card:last-child { grid-column: 1 / -1; min-height: 300px; }
   .contact-section { grid-template-columns: 1fr; }
   .contact-actions { width: 100%; }
+  .quick-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1180px) {
   .site-header { min-height: 76px; }
   .menu-button { display: block; }
   .main-nav { position: absolute; top: 100%; left: 0; right: 0; display: none; align-items: stretch; flex-direction: column; gap: 0; padding: .8rem 1.25rem 1.25rem; background: var(--paper); border-bottom: 1px solid var(--line); box-shadow: 0 20px 30px rgba(15,42,36,.1); }
@@ -275,6 +285,7 @@ blockquote cite { color: var(--muted); font-size: .76rem; font-style: normal; fo
   .form-grid { grid-template-columns: 1fr; }
   .form-field-full { grid-column: auto; }
   .process-list { grid-template-columns: 1fr; }
+  .material-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 480px) {
