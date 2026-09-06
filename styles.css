@@ -104,9 +104,9 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .role-card small { margin-top: auto; padding-top: 1.2rem; color: var(--ink); border-top: 1px solid var(--line); font-size: .76rem; font-weight: 750; overflow-wrap: anywhere; }
 
 .action-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 1rem; }
-.action-card { min-height: 390px; position: relative; display: flex; flex-direction: column; justify-content: flex-end; padding: 2rem; color: var(--ink); background: var(--gold); border-radius: var(--radius); overflow: hidden; }
+.action-card { min-width: 0; min-height: 390px; position: relative; display: flex; flex-direction: column; justify-content: flex-end; padding: 2rem; color: var(--ink); background: var(--gold); border-radius: var(--radius); overflow: hidden; }
 .action-card:nth-child(3) { background: var(--sage); }
-.action-card h3 { margin: .5rem 0; font-family: Georgia, serif; font-size: 2.5rem; line-height: 1; }
+.action-card h3 { margin: .5rem 0; font-family: Georgia, serif; font-size: 2.5rem; line-height: 1; overflow-wrap: anywhere; hyphens: auto; }
 .action-card p { margin: .5rem 0 1.5rem; }
 .action-number { position: absolute; top: 1.5rem; right: 1.5rem; font-family: Georgia, serif; font-size: 2rem; }
 .status { font-size: .72rem; font-weight: 850; letter-spacing: .09em; text-transform: uppercase; }
@@ -226,7 +226,8 @@ blockquote cite { color: var(--muted); font-size: .76rem; font-style: normal; fo
   .event-grid { grid-template-columns: 1fr 1fr; }
   .event-featured { grid-column: 1 / -1; }
   .action-grid { grid-template-columns: 1fr 1fr; }
-  .action-image { grid-row: span 2; }
+  .action-image { grid-column: 1 / -1; grid-row: auto; }
+  .action-card h3 { font-size: clamp(2rem, 4vw, 2.5rem); }
   .club-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .story-section { grid-template-columns: .5fr 1.5fr; }
   .story-section blockquote { grid-column: 2; }
