@@ -124,8 +124,11 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .club-card:hover { transform: translateY(-3px); box-shadow: 0 12px 35px rgba(15,42,36,.08); }
 .club-card[hidden] { display: none; }
 .club-icon { display: grid; place-items: center; width: 42px; height: 42px; margin-bottom: 2.2rem; color: white; background: var(--orange); border-radius: 50%; font-size: 1rem; }
-.club-card:nth-child(3n) .club-icon { background: var(--blue); }
-.club-card:nth-child(3n+2) .club-icon { color: var(--ink); background: var(--gold); }
+.club-card[data-category="kultur"] .club-icon { color: white; background: var(--orange); }
+.club-card[data-category="foerder"] .club-icon { color: var(--ink); background: var(--gold); }
+.club-card[data-category="engagement"] .club-icon { color: white; background: var(--blue); }
+.club-card[data-category="sport"] .club-icon { color: var(--cream); background: var(--ink); }
+.club-card[data-category="politik"] .club-icon { color: var(--ink); background: var(--sage); }
 .club-card small { color: var(--muted); font-size: .68rem; font-weight: 850; letter-spacing: .1em; text-transform: uppercase; overflow-wrap: anywhere; }
 .club-card h3 { margin: .35rem 0 0; color: var(--ink); font-family: Georgia, serif; font-size: 1.18rem; line-height: 1.2; overflow-wrap: anywhere; }
 
