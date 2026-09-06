@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Materialausleihe des Vereinsrings Urbar für Urbarer Vereine anfragen.">
+  <meta name="theme-color" content="#173f35">
+  <title>Material ausleihen · Vereinsring Urbar</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css?v=20260906-1">
+  <script src="script.js?v=20260902-1" defer></script>
+  <script src="material-ausleihen.js?v=20260906-1" defer></script>
+</head>
+<body class="submission-page">
+  <a class="skip-link" href="#materialformular">Zum Formular springen</a>
+  <div class="preview-bar"><strong>Öffentliche Vorschau</strong><span>Noch keine offizielle Vereinsseite</span></div>
+
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Vereinsring Urbar – Startseite">
+      <span class="brand-mark" aria-hidden="true">VU</span>
+      <span><strong>Vereinsring Urbar</strong><small>Gemeinsam im Dorf</small></span>
+    </a>
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="hauptnavigation">
+      <span></span><span></span><span></span><span class="sr-only">Menü öffnen</span>
+    </button>
+    <nav id="hauptnavigation" class="main-nav" aria-label="Hauptnavigation">
+      <a href="index.html#termine">Termine</a>
+      <a href="index.html#vereine">Vereine</a>
+      <a href="index.html#aufgaben">Aufgaben</a>
+      <a href="index.html#aktionen">Aktionen</a>
+      <a href="veranstaltung-melden.html">Termin melden</a>
+      <a class="nav-button" href="#materialformular" aria-current="page">Material</a>
+    </nav>
+  </header>
+
+  <main class="submission-main">
+    <header class="submission-intro">
+      <p class="eyebrow">Ausleihe für Urbarer Vereine</p>
+      <h1>Material anfragen</h1>
+      <p>Biertischgarnituren, Stehtische, Hussen oder Gläser: Mit diesem Formular kommen alle Angaben vollständig und direkt beim Materialwart an.</p>
+    </header>
+
+    <div class="submission-layout">
+      <form id="materialformular" class="submission-card" action="mailto:material@vereinsring-urbar.de" method="post" enctype="text/plain">
+        <p class="preview-notice"><strong>Hinweis zur Vorschau:</strong> Die Adresse material@vereinsring-urbar.de ist als künftige Funktionsadresse vorgesehen und muss vor dem offiziellen Start eingerichtet werden.</p>
+
+        <fieldset class="form-section">
+          <legend>Verein und Kontakt</legend>
+          <div class="form-grid">
+            <div class="form-field form-field-full">
+              <label for="verein">Verein *</label>
+              <select id="verein" name="verein" required>
+                <option value="">Bitte auswählen</option>
+                <option>Bündnis 90/Die Grünen Urbar</option>
+                <option>Chor der Stommel-Stiftung „Familian Harmonists“</option>
+                <option>CDU Ortsverband Urbar</option>
+                <option>Der kleine Prinz – Förderverein der Kath. Kindertagesstätte St. Peter und Paul e. V.</option>
+                <option>Deutsches Rotes Kreuz Ortsverein Urbar</option>
+                <option>FC Germania 1911 e. V. Urbar</option>
+                <option>Förderkreis St. Peter &amp; Paul, Urbar e. V.</option>
+                <option>Freiwillige Feuerwehr der VG Vallendar – Löschzug Urbar</option>
+                <option>Freie Liste – Bürger für Urbar e. V.</option>
+                <option>Freunde der Kunst und Kultur in Urbar</option>
+                <option>Freunde der Stommel-Stiftung e. V.</option>
+                <option>Helping Hands e. V. – Deutsch-Philippinischer Hilfsverein</option>
+                <option>Katholische Frauengemeinschaft</option>
+                <option>Kirmesgesellschaft Frohsinn e. V.</option>
+                <option>MIGU e. V.</option>
+                <option>Möhnenverein Urbar 1951 e. V.</option>
+                <option>Sammellinse – Förderverein der Grundschule Urbar e. V.</option>
+                <option>St. Sebastianus Schützengesellschaft Urbar</option>
+                <option>Singgemeinschaft 1868 Urbar e. V.</option>
+                <option>Sozialverband VdK</option>
+                <option>SPD Urbar</option>
+                <option>Sterntaler – Förderverein der Kindertagesstätte unter dem Regenbogen</option>
+                <option>Stommel-Stiftung</option>
+                <option>Tanzsport time to dance e. V.</option>
+                <option>Turnverein Urbar 1889 e. V.</option>
+                <option>Vereinsring der Urbarer Vereine e. V.</option>
+                <option>Anderer Verein / andere Organisation</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="ansprechperson">Ansprechperson *</label>
+              <input id="ansprechperson" name="ansprechperson" type="text" autocomplete="name" required>
+            </div>
+            <div class="form-field">
+              <label for="email">E-Mail *</label>
+              <input id="email" name="email" type="email" autocomplete="email" required>
+            </div>
+            <div class="form-field form-field-full">
+              <label for="telefon">Telefon für Rückfragen *</label>
+              <input id="telefon" name="telefon" type="tel" autocomplete="tel" required>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="form-section">
+          <legend>Anlass und Zeitraum</legend>
+          <div class="form-grid">
+            <div class="form-field form-field-full">
+              <label for="anlass">Veranstaltung oder Anlass *</label>
+              <input id="anlass" name="anlass" type="text" required placeholder="z. B. Sommerfest des Vereins">
+            </div>
+            <div class="form-field form-field-full">
+              <label for="einsatzort">Einsatzort *</label>
+              <input id="einsatzort" name="einsatzort" type="text" required placeholder="Wo wird das Material benötigt?">
+            </div>
+            <div class="form-field">
+              <label for="abholung">Gewünschte Abholung *</label>
+              <input id="abholung" name="abholung" type="datetime-local" required>
+            </div>
+            <div class="form-field">
+              <label for="rueckgabe">Geplante Rückgabe *</label>
+              <input id="rueckgabe" name="rueckgabe" type="datetime-local" required>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="form-section">
+          <legend>Gewünschtes Material</legend>
+          <div class="material-grid">
+            <div class="material-item"><div><strong>Biertischgarnituren</strong><small>Ein Tisch mit zwei Bänken</small></div><label for="biertischgarnituren">Anzahl<input id="biertischgarnituren" name="biertischgarnituren" type="number" min="0" step="1" value="0" inputmode="numeric"></label></div>
+            <div class="material-item"><div><strong>Stehtische</strong><small>Ohne Husse</small></div><label for="stehtische">Anzahl<input id="stehtische" name="stehtische" type="number" min="0" step="1" value="0" inputmode="numeric"></label></div>
+            <div class="material-item"><div><strong>Hussen</strong><small>Für Stehtische</small></div><label for="hussen">Anzahl<input id="hussen" name="hussen" type="number" min="0" step="1" value="0" inputmode="numeric"></label></div>
+            <div class="material-item"><div><strong>Gläser</strong><small>Bitte gewünschte Stückzahl eintragen</small></div><label for="glaeser">Anzahl<input id="glaeser" name="glaeser" type="number" min="0" step="1" value="0" inputmode="numeric"></label></div>
+          </div>
+          <p id="material-hinweis" class="material-hint">Bitte mindestens eine Materialart oder „Sonstiges“ angeben.</p>
+          <div class="form-grid" style="margin-top: 1.1rem;">
+            <div class="form-field">
+              <label for="sonstiges">Sonstiges Material</label>
+              <input id="sonstiges" name="sonstiges" type="text" placeholder="Was wird außerdem benötigt?">
+            </div>
+            <div class="form-field">
+              <label for="sonstiges-anzahl">Anzahl</label>
+              <input id="sonstiges-anzahl" name="sonstiges-anzahl" type="number" min="0" step="1" inputmode="numeric">
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="form-section">
+          <legend>Organisation</legend>
+          <div class="form-grid">
+            <div class="form-field form-field-full">
+              <label for="transport">Abholung und Transport</label>
+              <select id="transport" name="transport">
+                <option>Der Verein holt das Material selbst ab</option>
+                <option>Unterstützung beim Transport erforderlich</option>
+                <option>Noch zu klären</option>
+              </select>
+            </div>
+            <div class="form-field form-field-full">
+              <label for="hinweise">Hinweise oder Rückfragen</label>
+              <textarea id="hinweise" name="hinweise" placeholder="Was sollte der Materialwart noch wissen?"></textarea>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="form-section">
+          <legend>Anfrage abschließen</legend>
+          <div class="form-check">
+            <input id="bestaetigung" name="bestaetigung" type="checkbox" required>
+            <label for="bestaetigung">Mir ist bewusst, dass die Anfrage noch keine Zusage ist. Verfügbarkeit, Übergabe und Rückgabe werden mit dem Materialwart abgestimmt. Ich habe die <a href="datenschutz.html">Datenschutzhinweise</a> gelesen. *</label>
+          </div>
+          <div class="form-actions">
+            <button class="button button-primary" type="submit">Materialanfrage als E-Mail vorbereiten</button>
+            <p id="formular-status" class="form-status" role="status" aria-live="polite">Es werden keine Angaben auf dieser Website gespeichert.</p>
+          </div>
+        </fieldset>
+      </form>
+
+      <aside class="process-card" aria-labelledby="ablauf-title">
+        <p class="eyebrow">So geht es weiter</p>
+        <h2 id="ablauf-title">Von der Anfrage zur Ausgabe</h2>
+        <ol class="process-list">
+          <li><div><strong>Anfragen</strong><span>Der Verein nennt Material, Stückzahlen und gewünschten Zeitraum.</span></div></li>
+          <li><div><strong>Abstimmen</strong><span>Der Materialwart prüft die Verfügbarkeit und klärt die Übergabe.</span></div></li>
+          <li><div><strong>Ausleihen</strong><span>Ausgabe und vollständige Rückgabe werden verbindlich vereinbart.</span></div></li>
+        </ol>
+        <p class="process-note">Die Ausleihe ist für Urbarer Vereine vorgesehen. Eine Anfrage ist noch keine Reservierungsbestätigung.</p>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand"><span class="brand-mark" aria-hidden="true">VU</span><div><strong>Vereinsring Urbar</strong><small>Öffentliche Website-Vorschau</small></div></div>
+    <nav aria-label="Rechtliche Hinweise"><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a><a href="veranstaltung-melden.html">Termin melden</a><a href="index.html#vereine">Vereinsverzeichnis</a></nav>
+    <p class="footer-note">Noch keine offizielle Website des Vereinsrings. Stand: September 2026.</p>
+  </footer>
+</body>
+</html>
